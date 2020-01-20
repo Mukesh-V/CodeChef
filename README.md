@@ -1,2 +1,3 @@
 ### Correct ones:
 CHFCHK
+EXAMCHT
