@@ -8,7 +8,7 @@ int sum(vector<int> subseq, int no){
     for(x=0;x<no;x++){
         total += subseq[x];
     }
-    for(x=no;x>0;x--){
+    for(x=no-1;x>=0;x--){
         right_sum += subseq[x];
         total -= subseq[x];
         if(right_sum == total)
@@ -19,7 +19,8 @@ int sum(vector<int> subseq, int no){
 
 int create_seq(vector<int> inp, int index, int num){
     vector<int> b;
-    for(int l=0;l<num; l++){
+    int l;
+    for(l=0;l<num; l++){
         if(l==index-1)
             b.push_back(0);
         else
@@ -48,4 +49,5 @@ int main(){
     for(i=0;i<t;i++){
         printf("%d\n",ans[i]);
     }
+    return 0;
 }
